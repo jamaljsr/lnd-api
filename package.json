@@ -23,14 +23,9 @@
     "generate": "npm run generate:clean && npm run generate:protos && npm run generate:types && npm run generate:index"
   },
   "author": {
-    "name": "Ricardo Alonzo"
+    "name": "Jamal James",
+    "url": "https://github.com/jamaljsr"
   },
-  "contributors": [
-    {
-      "name": "Jamal James",
-      "url": "https://github.com/jamaljsr"
-    }
-  ],
   "license": "MIT",
   "dependencies": {
     "@grpc/grpc-js": "1.7.2",
