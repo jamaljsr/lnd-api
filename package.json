@@ -1,0 +1,46 @@
+{
+  "name": "@lightningpolar/lnd-api",
+  "version": "0.18.0-beta.rc3",
+  "description": "A Typescript gRPC client for LND with support for all LND sub-servers",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "config": {
+    "lnd_release_tag": "v0.18.0-beta.rc3"
+  },
+  "files": [
+    "dist",
+    "package.json",
+    "protos",
+    "README.md"
+  ],
+  "scripts": {
+    "push": "tsc && npm publish --access public",
+    "build": "tsc",
+    "generate:clean": "rm -rf ./src/types",
+    "generate:protos": "sh ./scripts/update_protos.sh ${npm_package_config_lnd_release_tag}",
+    "generate:types": "./node_modules/.bin/proto-loader-gen-types --longs=String --enums=String --defaults --oneofs --inputTemplate=%sPartial --outputTemplate=%s --grpcLib=@grpc/grpc-js --includeDirs=./protos/ --outDir=./src/types/ protos/*.proto protos/**/*.proto",
+    "generate:index": "node ./scripts/generateTypesIndex.js",
+    "generate": "npm run generate:clean && npm run generate:protos && npm run generate:types && npm run generate:index"
+  },
+  "author": {
+    "name": "Ricardo Alonzo"
+  },
+  "contributors": [
+    {
+      "name": "Jamal James",
+      "url": "https://github.com/jamaljsr"
+    }
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "@grpc/grpc-js": "1.7.2",
+    "@grpc/proto-loader": "0.7.3"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jamaljsr/lnd-api.git"
+  },
+  "devDependencies": {
+    "typescript": "4.8.4"
+  }
+}
