@@ -28,6 +28,7 @@ export interface SendPaymentRequestPartial {
   'maxShardSizeMsat'?: (number | string | Long);
   'amp'?: (boolean);
   'timePref'?: (number | string);
+  'firstHopCustomRecords'?: ({[key: number]: Buffer | Uint8Array | string});
 }
 
 export interface SendPaymentRequest {
@@ -54,4 +55,5 @@ export interface SendPaymentRequest {
   'maxShardSizeMsat': (string);
   'amp': (boolean);
   'timePref': (number);
+  'firstHopCustomRecords': ({[key: number]: Buffer});
 }

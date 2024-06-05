@@ -55,6 +55,7 @@ export interface ProtoGrpcType {
     CheckMacPermRequest: MessageTypeDefinition
     CheckMacPermResponse: MessageTypeDefinition
     CloseChannelRequest: MessageTypeDefinition
+    CloseOutput: MessageTypeDefinition
     CloseStatusUpdate: MessageTypeDefinition
     ClosedChannelUpdate: MessageTypeDefinition
     ClosedChannelsRequest: MessageTypeDefinition

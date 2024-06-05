@@ -56,6 +56,7 @@ export interface ProtoGrpcType {
     CheckMacPermRequest: MessageTypeDefinition
     CheckMacPermResponse: MessageTypeDefinition
     CloseChannelRequest: MessageTypeDefinition
+    CloseOutput: MessageTypeDefinition
     CloseStatusUpdate: MessageTypeDefinition
     ClosedChannelUpdate: MessageTypeDefinition
     ClosedChannelsRequest: MessageTypeDefinition
@@ -224,12 +225,16 @@ export interface ProtoGrpcType {
     WalletBalanceResponse: MessageTypeDefinition
   }
   routerrpc: {
+    AddAliasesRequest: MessageTypeDefinition
+    AddAliasesResponse: MessageTypeDefinition
     AprioriParameters: MessageTypeDefinition
     BimodalParameters: MessageTypeDefinition
     BuildRouteRequest: MessageTypeDefinition
     BuildRouteResponse: MessageTypeDefinition
     ChanStatusAction: EnumTypeDefinition
     CircuitKey: MessageTypeDefinition
+    DeleteAliasesRequest: MessageTypeDefinition
+    DeleteAliasesResponse: MessageTypeDefinition
     FailureDetail: EnumTypeDefinition
     FinalHtlcEvent: MessageTypeDefinition
     ForwardEvent: MessageTypeDefinition

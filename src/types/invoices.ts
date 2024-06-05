@@ -14,6 +14,9 @@ export interface ProtoGrpcType {
     AddHoldInvoiceResp: MessageTypeDefinition
     CancelInvoiceMsg: MessageTypeDefinition
     CancelInvoiceResp: MessageTypeDefinition
+    CircuitKey: MessageTypeDefinition
+    HtlcModifyRequest: MessageTypeDefinition
+    HtlcModifyResponse: MessageTypeDefinition
     Invoices: SubtypeConstructor<typeof grpc.Client, _invoicesrpc_InvoicesClient> & { service: _invoicesrpc_InvoicesDefinition }
     LookupInvoiceMsg: MessageTypeDefinition
     LookupModifier: EnumTypeDefinition
@@ -68,6 +71,7 @@ export interface ProtoGrpcType {
     CheckMacPermRequest: MessageTypeDefinition
     CheckMacPermResponse: MessageTypeDefinition
     CloseChannelRequest: MessageTypeDefinition
+    CloseOutput: MessageTypeDefinition
     CloseStatusUpdate: MessageTypeDefinition
     ClosedChannelUpdate: MessageTypeDefinition
     ClosedChannelsRequest: MessageTypeDefinition
