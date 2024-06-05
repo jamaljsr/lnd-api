@@ -1,6 +1,6 @@
 {
   "name": "@lightningpolar/lnd-api",
-  "version": "0.18.99-beta.pre1",
+  "version": "0.18.99-beta.pre2",
   "description": "A Typescript gRPC client for LND with support for all LND sub-servers",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -28,8 +28,8 @@
   },
   "license": "MIT",
   "dependencies": {
-    "@grpc/grpc-js": "1.7.2",
-    "@grpc/proto-loader": "0.7.3"
+    "@grpc/grpc-js": "1.10.8",
+    "@grpc/proto-loader": "0.7.13"
   },
   "repository": {
     "type": "git",
