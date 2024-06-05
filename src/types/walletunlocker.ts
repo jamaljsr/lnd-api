@@ -114,6 +114,7 @@ export interface ProtoGrpcType {
     HTLCAttempt: MessageTypeDefinition
     Hop: MessageTypeDefinition
     HopHint: MessageTypeDefinition
+    InboundFee: MessageTypeDefinition
     InitWalletRequest: MessageTypeDefinition
     InitWalletResponse: MessageTypeDefinition
     Initiator: EnumTypeDefinition

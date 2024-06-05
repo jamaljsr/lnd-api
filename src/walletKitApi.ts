@@ -391,7 +391,7 @@ export class WalletKitApi {
    * lncli: `wallet labeltx`
    * LabelTransaction adds a label to a transaction. If the transaction already
    * has a label the call will fail unless the overwrite bool is set. This will
-   * overwrite the existing transaction label. Labels must not be empty, and
+   * overwrite the exiting transaction label. Labels must not be empty, and
    * cannot exceed 500 characters.
    */
   async labelTransaction(

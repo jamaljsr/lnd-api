@@ -259,4 +259,32 @@ export class RouterApi {
   ): Promise<RPC.UpdateChanStatusResponse> {
     return promisify(this.client.UpdateChanStatus.bind(this.client))(request);
   }
+
+  /**
+   * XAddLocalChanAliases is an experimental API that creates a set of new
+   * channel SCID alias mappings. The list of successfully created mappings is
+   * returned. This is only a locally stored alias, and will not be communicated
+   * to the channel peer via any message. Therefore, routing over such an alias
+   * will only work of the peer also calls this same RPC on their end.
+   */
+  async xAddLocalChanAliases(
+    request: RPC.AddAliasesRequestPartial = {}
+  ): Promise<RPC.AddAliasesResponse> {
+    return promisify(this.client.XAddLocalChanAliases.bind(this.client))(
+      request
+    );
+  }
+
+  /**
+   * XDeleteLocalChanAliases is an experimental API that deletes a set of new
+   * alias mappings. The list of successfully deleted mappings is returned. The
+   * deletion will not be communicated to the channel peer via any message.
+   */
+  async xDeleteLocalChanAliases(
+    request: RPC.DeleteAliasesRequestPartial = {}
+  ): Promise<RPC.DeleteAliasesResponse> {
+    return promisify(this.client.XDeleteLocalChanAliases.bind(this.client))(
+      request
+    );
+  }
 }

@@ -1,4 +1,4 @@
-import { ClientReadableStream } from '@grpc/grpc-js';
+import { ClientDuplexStream, ClientReadableStream } from '@grpc/grpc-js';
 import { promisify } from 'util';
 import { LndClientOptions } from './';
 import { loadProto } from './proto';
@@ -78,12 +78,25 @@ export class InvoicesApi {
   }
 
   /**
-   * LookupInvoiceV2 attempts to look up at invoice. An invoice can be refrenced
+   * LookupInvoiceV2 attempts to look up at invoice. An invoice can be referenced
    * using either its payment hash, payment address, or set ID.
    */
   async lookupInvoiceV2(
     request: RPC.LookupInvoiceMsgPartial = {}
   ): Promise<RPC.Invoice> {
     return promisify(this.client.LookupInvoiceV2.bind(this.client))(request);
+  }
+
+  /**
+   * HtlcModifier is a bidirectional streaming RPC that allows a client to
+   * intercept and modify the HTLCs that attempt to settle the given invoice. The
+   * server will send HTLCs of invoices to the client and the client can modify
+   * some aspects of the HTLC in order to pass the invoice acceptance tests.
+   */
+  htlcModifier(): ClientDuplexStream<
+    RPC.HtlcModifyResponse,
+    RPC.HtlcModifyRequestPartial
+  > {
+    return this.client.HtlcModifier();
   }
 }

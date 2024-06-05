@@ -111,6 +111,7 @@ export interface ProtoGrpcType {
     HTLCAttempt: MessageTypeDefinition
     Hop: MessageTypeDefinition
     HopHint: MessageTypeDefinition
+    InboundFee: MessageTypeDefinition
     Initiator: EnumTypeDefinition
     InstantUpdate: MessageTypeDefinition
     InterceptFeedback: MessageTypeDefinition

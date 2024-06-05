@@ -142,6 +142,7 @@ export * from './lnrpc/HTLC';
 export * from './lnrpc/HTLCAttempt';
 export * from './lnrpc/Hop';
 export * from './lnrpc/HopHint';
+export * from './lnrpc/InboundFee';
 export * from './lnrpc/InitWalletRequest';
 export * from './lnrpc/InitWalletResponse';
 export * from './lnrpc/Initiator';

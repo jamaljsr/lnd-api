@@ -17,17 +17,21 @@ const subDirs = fs
   .map((dirent) => dirent.name);
 
 // Get all files in each subdirectory
-const filePaths = [];
+const filePaths = new Map();
 subDirs.forEach((subDir) => {
   const filesInSubDir = fs.readdirSync(`${TYPES_DIR}/${subDir}`);
   filesInSubDir.forEach((file) => {
-    filePaths.push(`./${subDir}/${path.basename(file, '.ts')}`);
+    const name = path.basename(file, '.ts');
+    const filePath = `./${subDir}/${path.basename(file, '.ts')}`;
+    if (!filePaths.has(name)) filePaths.set(name, filePath);
   });
 });
 
 // Create index.ts file in types directory exporting all types from the files
 // in each subdirectory
-const content = filePaths
-  .map((filePath) => `export * from '${filePath}';`)
-  .join('\n');
+let content = '';
+for (const filePath of filePaths.values()) {
+  content += `export * from '${filePath}';\n`;
+}
+
 fs.writeFileSync(`${TYPES_DIR}/index.ts`, content);
