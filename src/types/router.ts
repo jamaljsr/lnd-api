@@ -26,6 +26,7 @@ export interface ProtoGrpcType {
     BatchOpenChannelResponse: MessageTypeDefinition
     BlindedHop: MessageTypeDefinition
     BlindedPath: MessageTypeDefinition
+    BlindedPathConfig: MessageTypeDefinition
     BlindedPaymentPath: MessageTypeDefinition
     Chain: MessageTypeDefinition
     ChanBackupExportRequest: MessageTypeDefinition

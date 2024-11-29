@@ -4,6 +4,7 @@ import type { RouteHintPartial as _lnrpc_RouteHintPartial, RouteHint as _lnrpc_R
 import type { InvoiceHTLCPartial as _lnrpc_InvoiceHTLCPartial, InvoiceHTLC as _lnrpc_InvoiceHTLC } from '../lnrpc/InvoiceHTLC';
 import type { FeaturePartial as _lnrpc_FeaturePartial, Feature as _lnrpc_Feature } from '../lnrpc/Feature';
 import type { AMPInvoiceStatePartial as _lnrpc_AMPInvoiceStatePartial, AMPInvoiceState as _lnrpc_AMPInvoiceState } from '../lnrpc/AMPInvoiceState';
+import type { BlindedPathConfigPartial as _lnrpc_BlindedPathConfigPartial, BlindedPathConfig as _lnrpc_BlindedPathConfig } from '../lnrpc/BlindedPathConfig';
 import type { Long } from '@grpc/proto-loader';
 
 // Original file: protos/lightning.proto
@@ -55,6 +56,8 @@ export interface InvoicePartial {
   'paymentAddr'?: (Buffer | Uint8Array | string);
   'isAmp'?: (boolean);
   'ampInvoiceState'?: ({[key: string]: _lnrpc_AMPInvoiceStatePartial});
+  'isBlinded'?: (boolean);
+  'blindedPathConfig'?: (_lnrpc_BlindedPathConfigPartial | null);
 }
 
 export interface Invoice {
@@ -85,4 +88,6 @@ export interface Invoice {
   'paymentAddr': (Buffer);
   'isAmp': (boolean);
   'ampInvoiceState': ({[key: string]: _lnrpc_AMPInvoiceState});
+  'isBlinded': (boolean);
+  'blindedPathConfig': (_lnrpc_BlindedPathConfig | null);
 }

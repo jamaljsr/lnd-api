@@ -55,6 +55,7 @@ export * from './lnrpc/BatchOpenChannelRequest';
 export * from './lnrpc/BatchOpenChannelResponse';
 export * from './lnrpc/BlindedHop';
 export * from './lnrpc/BlindedPath';
+export * from './lnrpc/BlindedPathConfig';
 export * from './lnrpc/BlindedPaymentPath';
 export * from './lnrpc/Chain';
 export * from './lnrpc/ChanBackupExportRequest';

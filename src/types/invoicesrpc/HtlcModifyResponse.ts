@@ -6,9 +6,13 @@ import type { Long } from '@grpc/proto-loader';
 export interface HtlcModifyResponsePartial {
   'circuitKey'?: (_invoicesrpc_CircuitKeyPartial | null);
   'amtPaid'?: (number | string | Long);
+  'cancelSet'?: (boolean);
+  '_amtPaid'?: "amtPaid";
 }
 
 export interface HtlcModifyResponse {
   'circuitKey': (_invoicesrpc_CircuitKey | null);
-  'amtPaid': (string);
+  'amtPaid'?: (string);
+  'cancelSet': (boolean);
+  '_amtPaid': "amtPaid";
 }

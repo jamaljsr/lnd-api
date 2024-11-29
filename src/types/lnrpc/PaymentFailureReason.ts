@@ -7,6 +7,7 @@ export const PaymentFailureReason = {
   FAILURE_REASON_ERROR: 'FAILURE_REASON_ERROR',
   FAILURE_REASON_INCORRECT_PAYMENT_DETAILS: 'FAILURE_REASON_INCORRECT_PAYMENT_DETAILS',
   FAILURE_REASON_INSUFFICIENT_BALANCE: 'FAILURE_REASON_INSUFFICIENT_BALANCE',
+  FAILURE_REASON_CANCELED: 'FAILURE_REASON_CANCELED',
 } as const;
 
 export type PaymentFailureReasonPartial =
@@ -22,5 +23,7 @@ export type PaymentFailureReasonPartial =
   | 4
   | 'FAILURE_REASON_INSUFFICIENT_BALANCE'
   | 5
+  | 'FAILURE_REASON_CANCELED'
+  | 6
 
 export type PaymentFailureReason = typeof PaymentFailureReason[keyof typeof PaymentFailureReason]

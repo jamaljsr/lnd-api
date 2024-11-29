@@ -28,6 +28,7 @@ export interface SendPaymentRequestPartial {
   'maxShardSizeMsat'?: (number | string | Long);
   'amp'?: (boolean);
   'timePref'?: (number | string);
+  'cancelable'?: (boolean);
   'firstHopCustomRecords'?: ({[key: number]: Buffer | Uint8Array | string});
 }
 
@@ -55,5 +56,6 @@ export interface SendPaymentRequest {
   'maxShardSizeMsat': (string);
   'amp': (boolean);
   'timePref': (number);
+  'cancelable': (boolean);
   'firstHopCustomRecords': ({[key: number]: Buffer});
 }

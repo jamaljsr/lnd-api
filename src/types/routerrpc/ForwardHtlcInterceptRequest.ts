@@ -14,7 +14,7 @@ export interface ForwardHtlcInterceptRequestPartial {
   'customRecords'?: ({[key: number]: Buffer | Uint8Array | string});
   'onionBlob'?: (Buffer | Uint8Array | string);
   'autoFailHeight'?: (number);
-  'incomingHtlcWireCustomRecords'?: ({[key: number]: Buffer | Uint8Array | string});
+  'inWireCustomRecords'?: ({[key: number]: Buffer | Uint8Array | string});
 }
 
 export interface ForwardHtlcInterceptRequest {
@@ -28,5 +28,5 @@ export interface ForwardHtlcInterceptRequest {
   'customRecords': ({[key: number]: Buffer});
   'onionBlob': (Buffer);
   'autoFailHeight': (number);
-  'incomingHtlcWireCustomRecords': ({[key: number]: Buffer});
+  'inWireCustomRecords': ({[key: number]: Buffer});
 }

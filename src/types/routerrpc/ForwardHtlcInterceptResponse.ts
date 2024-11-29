@@ -11,9 +11,9 @@ export interface ForwardHtlcInterceptResponsePartial {
   'preimage'?: (Buffer | Uint8Array | string);
   'failureMessage'?: (Buffer | Uint8Array | string);
   'failureCode'?: (_lnrpc_Failure_FailureCodePartial);
-  'incomingAmountMsat'?: (number | string | Long);
-  'outgoingAmountMsat'?: (number | string | Long);
-  'outgoingHtlcWireCustomRecords'?: ({[key: number]: Buffer | Uint8Array | string});
+  'inAmountMsat'?: (number | string | Long);
+  'outAmountMsat'?: (number | string | Long);
+  'outWireCustomRecords'?: ({[key: number]: Buffer | Uint8Array | string});
 }
 
 export interface ForwardHtlcInterceptResponse {
@@ -22,7 +22,7 @@ export interface ForwardHtlcInterceptResponse {
   'preimage': (Buffer);
   'failureMessage': (Buffer);
   'failureCode': (_lnrpc_Failure_FailureCode);
-  'incomingAmountMsat': (string);
-  'outgoingAmountMsat': (string);
-  'outgoingHtlcWireCustomRecords': ({[key: number]: Buffer});
+  'inAmountMsat': (string);
+  'outAmountMsat': (string);
+  'outWireCustomRecords': ({[key: number]: Buffer});
 }
