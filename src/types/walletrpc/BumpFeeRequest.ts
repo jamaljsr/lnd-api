@@ -11,6 +11,7 @@ export interface BumpFeeRequestPartial {
   'satPerVbyte'?: (number | string | Long);
   'immediate'?: (boolean);
   'budget'?: (number | string | Long);
+  'deadlineDelta'?: (number);
 }
 
 export interface BumpFeeRequest {
@@ -21,4 +22,5 @@ export interface BumpFeeRequest {
   'satPerVbyte': (string);
   'immediate': (boolean);
   'budget': (string);
+  'deadlineDelta': (number);
 }
