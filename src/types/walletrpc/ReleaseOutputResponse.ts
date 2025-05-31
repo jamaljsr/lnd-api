@@ -2,7 +2,9 @@
 
 
 export interface ReleaseOutputResponsePartial {
+  'status'?: (string);
 }
 
 export interface ReleaseOutputResponse {
+  'status': (string);
 }

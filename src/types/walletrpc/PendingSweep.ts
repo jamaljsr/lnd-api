@@ -19,6 +19,7 @@ export interface PendingSweepPartial {
   'immediate'?: (boolean);
   'budget'?: (number | string | Long);
   'deadlineHeight'?: (number);
+  'maturityHeight'?: (number);
 }
 
 export interface PendingSweep {
@@ -36,4 +37,5 @@ export interface PendingSweep {
   'immediate': (boolean);
   'budget': (string);
   'deadlineHeight': (number);
+  'maturityHeight': (number);
 }

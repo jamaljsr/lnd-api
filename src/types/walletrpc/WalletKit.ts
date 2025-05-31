@@ -6,6 +6,8 @@ import type { AddrRequestPartial as _walletrpc_AddrRequestPartial, AddrRequest a
 import type { AddrResponsePartial as _walletrpc_AddrResponsePartial, AddrResponse as _walletrpc_AddrResponse } from '../walletrpc/AddrResponse';
 import type { BumpFeeRequestPartial as _walletrpc_BumpFeeRequestPartial, BumpFeeRequest as _walletrpc_BumpFeeRequest } from '../walletrpc/BumpFeeRequest';
 import type { BumpFeeResponsePartial as _walletrpc_BumpFeeResponsePartial, BumpFeeResponse as _walletrpc_BumpFeeResponse } from '../walletrpc/BumpFeeResponse';
+import type { BumpForceCloseFeeRequestPartial as _walletrpc_BumpForceCloseFeeRequestPartial, BumpForceCloseFeeRequest as _walletrpc_BumpForceCloseFeeRequest } from '../walletrpc/BumpForceCloseFeeRequest';
+import type { BumpForceCloseFeeResponsePartial as _walletrpc_BumpForceCloseFeeResponsePartial, BumpForceCloseFeeResponse as _walletrpc_BumpForceCloseFeeResponse } from '../walletrpc/BumpForceCloseFeeResponse';
 import type { EstimateFeeRequestPartial as _walletrpc_EstimateFeeRequestPartial, EstimateFeeRequest as _walletrpc_EstimateFeeRequest } from '../walletrpc/EstimateFeeRequest';
 import type { EstimateFeeResponsePartial as _walletrpc_EstimateFeeResponsePartial, EstimateFeeResponse as _walletrpc_EstimateFeeResponse } from '../walletrpc/EstimateFeeResponse';
 import type { FinalizePsbtRequestPartial as _walletrpc_FinalizePsbtRequestPartial, FinalizePsbtRequest as _walletrpc_FinalizePsbtRequest } from '../walletrpc/FinalizePsbtRequest';
@@ -64,6 +66,15 @@ export interface WalletKitClient extends grpc.Client {
   bumpFee(argument: _walletrpc_BumpFeeRequestPartial, metadata: grpc.Metadata, callback: grpc.requestCallback<_walletrpc_BumpFeeResponse>): grpc.ClientUnaryCall;
   bumpFee(argument: _walletrpc_BumpFeeRequestPartial, options: grpc.CallOptions, callback: grpc.requestCallback<_walletrpc_BumpFeeResponse>): grpc.ClientUnaryCall;
   bumpFee(argument: _walletrpc_BumpFeeRequestPartial, callback: grpc.requestCallback<_walletrpc_BumpFeeResponse>): grpc.ClientUnaryCall;
+  
+  BumpForceCloseFee(argument: _walletrpc_BumpForceCloseFeeRequestPartial, metadata: grpc.Metadata, options: grpc.CallOptions, callback: grpc.requestCallback<_walletrpc_BumpForceCloseFeeResponse>): grpc.ClientUnaryCall;
+  BumpForceCloseFee(argument: _walletrpc_BumpForceCloseFeeRequestPartial, metadata: grpc.Metadata, callback: grpc.requestCallback<_walletrpc_BumpForceCloseFeeResponse>): grpc.ClientUnaryCall;
+  BumpForceCloseFee(argument: _walletrpc_BumpForceCloseFeeRequestPartial, options: grpc.CallOptions, callback: grpc.requestCallback<_walletrpc_BumpForceCloseFeeResponse>): grpc.ClientUnaryCall;
+  BumpForceCloseFee(argument: _walletrpc_BumpForceCloseFeeRequestPartial, callback: grpc.requestCallback<_walletrpc_BumpForceCloseFeeResponse>): grpc.ClientUnaryCall;
+  bumpForceCloseFee(argument: _walletrpc_BumpForceCloseFeeRequestPartial, metadata: grpc.Metadata, options: grpc.CallOptions, callback: grpc.requestCallback<_walletrpc_BumpForceCloseFeeResponse>): grpc.ClientUnaryCall;
+  bumpForceCloseFee(argument: _walletrpc_BumpForceCloseFeeRequestPartial, metadata: grpc.Metadata, callback: grpc.requestCallback<_walletrpc_BumpForceCloseFeeResponse>): grpc.ClientUnaryCall;
+  bumpForceCloseFee(argument: _walletrpc_BumpForceCloseFeeRequestPartial, options: grpc.CallOptions, callback: grpc.requestCallback<_walletrpc_BumpForceCloseFeeResponse>): grpc.ClientUnaryCall;
+  bumpForceCloseFee(argument: _walletrpc_BumpForceCloseFeeRequestPartial, callback: grpc.requestCallback<_walletrpc_BumpForceCloseFeeResponse>): grpc.ClientUnaryCall;
   
   DeriveKey(argument: _signrpc_KeyLocatorPartial, metadata: grpc.Metadata, options: grpc.CallOptions, callback: grpc.requestCallback<_signrpc_KeyDescriptor>): grpc.ClientUnaryCall;
   DeriveKey(argument: _signrpc_KeyLocatorPartial, metadata: grpc.Metadata, callback: grpc.requestCallback<_signrpc_KeyDescriptor>): grpc.ClientUnaryCall;
@@ -304,6 +315,8 @@ export interface WalletKitClient extends grpc.Client {
 export interface WalletKitHandlers extends grpc.UntypedServiceImplementation {
   BumpFee: grpc.handleUnaryCall<_walletrpc_BumpFeeRequest, _walletrpc_BumpFeeResponsePartial>;
   
+  BumpForceCloseFee: grpc.handleUnaryCall<_walletrpc_BumpForceCloseFeeRequest, _walletrpc_BumpForceCloseFeeResponsePartial>;
+  
   DeriveKey: grpc.handleUnaryCall<_signrpc_KeyLocator, _signrpc_KeyDescriptorPartial>;
   
   DeriveNextKey: grpc.handleUnaryCall<_walletrpc_KeyReq, _signrpc_KeyDescriptorPartial>;
@@ -360,6 +373,7 @@ export interface WalletKitHandlers extends grpc.UntypedServiceImplementation {
 
 export interface WalletKitDefinition extends grpc.ServiceDefinition {
   BumpFee: MethodDefinition<_walletrpc_BumpFeeRequestPartial, _walletrpc_BumpFeeResponsePartial, _walletrpc_BumpFeeRequest, _walletrpc_BumpFeeResponse>
+  BumpForceCloseFee: MethodDefinition<_walletrpc_BumpForceCloseFeeRequestPartial, _walletrpc_BumpForceCloseFeeResponsePartial, _walletrpc_BumpForceCloseFeeRequest, _walletrpc_BumpForceCloseFeeResponse>
   DeriveKey: MethodDefinition<_signrpc_KeyLocatorPartial, _signrpc_KeyDescriptorPartial, _signrpc_KeyLocator, _signrpc_KeyDescriptor>
   DeriveNextKey: MethodDefinition<_walletrpc_KeyReqPartial, _signrpc_KeyDescriptorPartial, _walletrpc_KeyReq, _signrpc_KeyDescriptor>
   EstimateFee: MethodDefinition<_walletrpc_EstimateFeeRequestPartial, _walletrpc_EstimateFeeResponsePartial, _walletrpc_EstimateFeeRequest, _walletrpc_EstimateFeeResponse>

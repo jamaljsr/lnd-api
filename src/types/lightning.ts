@@ -146,6 +146,7 @@ export interface ProtoGrpcType {
     MacaroonId: MessageTypeDefinition
     MacaroonPermission: MessageTypeDefinition
     MacaroonPermissionList: MessageTypeDefinition
+    MetadataValues: MessageTypeDefinition
     MiddlewareRegistration: MessageTypeDefinition
     MultiChanBackup: MessageTypeDefinition
     NetworkInfo: MessageTypeDefinition

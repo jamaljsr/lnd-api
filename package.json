@@ -1,11 +1,11 @@
 {
   "name": "@lightningpolar/lnd-api",
-  "version": "0.18.5-beta",
+  "version": "0.19.0-beta",
   "description": "A Typescript gRPC client for LND with support for all LND sub-servers",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "config": {
-    "lnd_release_tag": "v0.18.5-beta"
+    "lnd_release_tag": "v0.19.0-beta"
   },
   "files": [
     "dist",

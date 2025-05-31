@@ -2,7 +2,9 @@
 
 
 export interface LabelTransactionResponsePartial {
+  'status'?: (string);
 }
 
 export interface LabelTransactionResponse {
+  'status': (string);
 }

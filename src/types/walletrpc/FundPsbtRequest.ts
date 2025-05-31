@@ -17,8 +17,12 @@ export interface FundPsbtRequestPartial {
   'changeType'?: (_walletrpc_ChangeAddressTypePartial);
   'coinSelect'?: (_walletrpc_PsbtCoinSelectPartial | null);
   'coinSelectionStrategy'?: (_lnrpc_CoinSelectionStrategyPartial);
+  'satPerKw'?: (number | string | Long);
+  'maxFeeRatio'?: (number | string);
+  'customLockId'?: (Buffer | Uint8Array | string);
+  'lockExpirationSeconds'?: (number | string | Long);
   'template'?: "psbt"|"raw"|"coinSelect";
-  'fees'?: "targetConf"|"satPerVbyte";
+  'fees'?: "targetConf"|"satPerVbyte"|"satPerKw";
 }
 
 export interface FundPsbtRequest {
@@ -32,6 +36,10 @@ export interface FundPsbtRequest {
   'changeType': (_walletrpc_ChangeAddressType);
   'coinSelect'?: (_walletrpc_PsbtCoinSelect | null);
   'coinSelectionStrategy': (_lnrpc_CoinSelectionStrategy);
+  'satPerKw'?: (string);
+  'maxFeeRatio': (number);
+  'customLockId': (Buffer);
+  'lockExpirationSeconds': (string);
   'template': "psbt"|"raw"|"coinSelect";
-  'fees': "targetConf"|"satPerVbyte";
+  'fees': "targetConf"|"satPerVbyte"|"satPerKw";
 }

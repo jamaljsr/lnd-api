@@ -148,6 +148,7 @@ export interface ProtoGrpcType {
     MacaroonId: MessageTypeDefinition
     MacaroonPermission: MessageTypeDefinition
     MacaroonPermissionList: MessageTypeDefinition
+    MetadataValues: MessageTypeDefinition
     MiddlewareRegistration: MessageTypeDefinition
     MultiChanBackup: MessageTypeDefinition
     NetworkInfo: MessageTypeDefinition
@@ -268,6 +269,8 @@ export interface ProtoGrpcType {
     AddressType: EnumTypeDefinition
     BumpFeeRequest: MessageTypeDefinition
     BumpFeeResponse: MessageTypeDefinition
+    BumpForceCloseFeeRequest: MessageTypeDefinition
+    BumpForceCloseFeeResponse: MessageTypeDefinition
     ChangeAddressType: EnumTypeDefinition
     EstimateFeeRequest: MessageTypeDefinition
     EstimateFeeResponse: MessageTypeDefinition
