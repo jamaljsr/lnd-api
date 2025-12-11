@@ -51,6 +51,7 @@ export interface ProtoGrpcType {
     Channel: MessageTypeDefinition
     ChannelAcceptRequest: MessageTypeDefinition
     ChannelAcceptResponse: MessageTypeDefinition
+    ChannelAuthProof: MessageTypeDefinition
     ChannelBackup: MessageTypeDefinition
     ChannelBackupSubscription: MessageTypeDefinition
     ChannelBackups: MessageTypeDefinition
@@ -79,12 +80,13 @@ export interface ProtoGrpcType {
     ClosedChannelsResponse: MessageTypeDefinition
     CoinSelectionStrategy: EnumTypeDefinition
     CommitmentType: EnumTypeDefinition
-    ConfirmationUpdate: MessageTypeDefinition
     ConnectPeerRequest: MessageTypeDefinition
     ConnectPeerResponse: MessageTypeDefinition
     CustomMessage: MessageTypeDefinition
     DebugLevelRequest: MessageTypeDefinition
     DebugLevelResponse: MessageTypeDefinition
+    DelCanceledInvoiceReq: MessageTypeDefinition
+    DelCanceledInvoiceResp: MessageTypeDefinition
     DeleteAllPaymentsRequest: MessageTypeDefinition
     DeleteAllPaymentsResponse: MessageTypeDefinition
     DeleteMacaroonIDRequest: MessageTypeDefinition
